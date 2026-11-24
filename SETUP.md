@@ -6,6 +6,10 @@ Create a project, then run `supabase/migrations/001_workspace.sql` in its SQL ed
 
 Copy the project URL and anonymous key into `src/config.js`. The anonymous key is safe in a frontend only because the migration enables Row Level Security. Never use a service role key in the dashboard.
 
+## Email and password accounts
+
+In Supabase, open **Authentication → Providers → Email** and keep email/password sign-in enabled. In **Authentication → URL Configuration**, add your GitHub Pages URL, such as `https://YOUR-GITHUB-USERNAME.github.io/hr-gokul-workspace/`, to Redirect URLs. This lets account-confirmation and password-reset emails return users to the dashboard.
+
 ## 2. Run the dashboard
 
 Host the `HR-GOKUL-WORKSPACE` folder using any static server. The app uses ES modules, so do not open `index.html` directly from the file system.
